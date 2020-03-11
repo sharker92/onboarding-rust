@@ -7,3 +7,11 @@ fn test_week0_exercise2_example1() {
 
     assert_eq!(expected, partition_labels(input));
 }
+
+#[test]
+fn test_week0_exercise2_example2() {
+    let input = "ababcbacadefegdehbijhklij".to_string();
+    let expected = vec![25];
+
+    assert_eq!(expected, partition_labels(input));
+}

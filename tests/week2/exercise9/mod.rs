@@ -1,7 +1,7 @@
 use onboarding_rust::week2::exercise9::is_isomorphic;
 
 #[test]
-fn test_week2_exercise8_example1() {
+fn test_week2_exercise9_example1() {
     let s = "egg".to_string();
     let t = "add".to_string();
 
@@ -11,7 +11,7 @@ fn test_week2_exercise8_example1() {
 }
 
 #[test]
-fn test_week2_exercise8_example2() {
+fn test_week2_exercise9_example2() {
     let s = "foo".to_string();
     let t = "bar".to_string();
 
@@ -21,7 +21,7 @@ fn test_week2_exercise8_example2() {
 }
 
 #[test]
-fn test_week2_exercise8_example3() {
+fn test_week2_exercise9_example3() {
     let s = "paper".to_string();
     let t = "title".to_string();
 

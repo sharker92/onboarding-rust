@@ -38,3 +38,13 @@ fn test_week2_exercise10_example4() {
 
     assert_eq!(expected, word_pattern(pattern, st));
 }
+
+#[test]
+fn test_week2_exercise10_example5() {
+    let pattern = "aaa".to_string();
+    let st = "aa aa aa aa".to_string();
+
+    let expected = false;
+
+    assert_eq!(expected, word_pattern(pattern, st));
+}

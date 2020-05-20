@@ -2,15 +2,14 @@ use onboarding_rust::week2::exercise12::MyHashSet;
 
 #[test]
 fn test_week2_exercise12_example1() {
-    let mut hash_map: MyHashSet = MyHashSet::new();
-    hash_map.put(1, 1);
-    hash_map.put(2, 2);
-    assert_eq!(1, hash_map.get(1));
-    assert_eq!(-1, hash_map.get(3));
+    let mut hash_set: MyHashSet = MyHashSet::new();
+    hash_set.add(1);
+    hash_set.add(2);
+    assert!(hash_set.contains(1), "not contains 1");
+    assert!(!hash_set.contains(3), "contains 3");
+    hash_set.add(2);
+    assert!(hash_set.contains(2), "not contains 2"); // returns true
+    hash_set.remove(2);
+    assert!(!hash_set.contains(2,) "contains 2");
 
-    hash_map.put(2, 1);
-    assert_eq!(1, hash_map.get(2));
-
-    hash_map.remove(2);
-    assert_eq!(-1, hash_map.get(2));
 }

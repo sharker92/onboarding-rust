@@ -18,7 +18,7 @@ impl MyHashMap {
             } else {
                   self.key.push(key);
                   self.value.push(value);
-            };
+            }
       }
 
       pub fn get(&self, key: i32) -> i32 {
@@ -33,8 +33,6 @@ impl MyHashMap {
             if let Some(i) = self.key.iter().position(|x| *x == key) {
                   self.value.remove(i);
                   self.key.remove(i);
-            } else {
-                  //
-            };
+            }
       }
 }

@@ -1,37 +1,27 @@
-struct MyHashSet {
-
+#[derive(Default)]
+pub struct MyHashSet {
+    key: Vec<i32>,
 }
 
-
-/** 
- * `&self` means the method takes an immutable reference.
- * If you need a mutable reference, change it to `&mut self` instead.
- */
 impl MyHashSet {
 
-    /** Initialize your data structure here. */
-    fn new() -> Self {
-        
+    pub fn new() -> Self {
+        Self { key: Vec::new() }
     }
-    
-    fn add(&self, key: i32) {
-        
+
+    pub fn add(&mut self, key: i32) {
+        if !self.key.contains(&key) {
+            self.key.push(key);
+        }
     }
-    
-    fn remove(&self, key: i32) {
-        
+
+    pub fn remove(&mut self, key: i32) {
+        if let Some(i) = self.key.iter().position(|x| *x == key) {
+            self.key.remove(i);
+        }
     }
-    
-    /** Returns true if this set contains the specified element */
-    fn contains(&self, key: i32) -> bool {
-        
+
+    pub fn contains(&self, key: i32) -> bool {
+        self.key.contains(&key)
     }
 }
-
-/**
- * Your MyHashSet object will be instantiated and called as such:
- * let obj = MyHashSet::new();
- * obj.add(key);
- * obj.remove(key);
- * let ret_3: bool = obj.contains(key);
- */

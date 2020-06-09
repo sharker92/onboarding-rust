@@ -10,6 +10,6 @@ fn test_week2_exercise12_example1() {
     hash_set.add(2);
     assert!(hash_set.contains(2), "not contains 2"); // returns true
     hash_set.remove(2);
-    assert!(!hash_set.contains(2,) "contains 2");
+    assert!(!hash_set.contains(2), "contains 2");
 
 }

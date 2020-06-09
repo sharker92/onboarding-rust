@@ -1,15 +1,16 @@
 pub fn overlap_rectangles(rect1: Vec<i32>, rect2: Vec<i32>) -> bool {
-    if rect1[0] >= rect2[2] || rect1[2] <= rect2[0] || rect1[1] >= rect2[3] || rect1[3] <= rect2[1]{
+    if rect1[0] >= rect2[2] || rect1[2] <= rect2[0] || rect1[1] >= rect2[3] || rect1[3] <= rect2[1]
+    {
         return false;
     }
     true
 }
 
 pub fn overlap_rectangles_2(rect1: Vec<i64>, rect2: Vec<i64>) -> bool {
-    let mut izq;
-    let mut der;
-    let mut bot;
-    let mut up;
+    let izq;
+    let der;
+    let bot;
+    let up;
 
     if rect1 == rect2 {
         return true;

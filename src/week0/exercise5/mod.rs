@@ -1,5 +1,5 @@
 pub fn network_delay_time(times: Vec<Vec<i32>>, n: i32, k: i32) -> i32 {
-    let mut times2 = times.clone();
+    let mut times2 = times;
     let mut stack = Vec::new();
     let mut buffer = Vec::new();
     buffer.push(vec![0, k, 0]);
@@ -15,7 +15,6 @@ pub fn network_delay_time(times: Vec<Vec<i32>>, n: i32, k: i32) -> i32 {
         stack.push(vec![last, (*buffer.last().unwrap())[2]]);
         buffer.pop();
         for (i, x) in times2.iter().enumerate() {
-
             if x[0] == last {
                 remove.push(i);
             }

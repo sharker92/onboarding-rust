@@ -21,7 +21,7 @@ fn dfs(i: usize, m: &[Vec<i32>], visited: &mut Vec<i32>) {
 }
 
 pub fn find_circle_num_2(input: Vec<Vec<i32>>) -> i32 {
-    let mut friends_relation = input.clone();
+    let mut friends_relation = input;
 
     (0..friends_relation.len()).fold(0, |circles, i| {
         circles
@@ -36,7 +36,6 @@ pub fn find_circle_num_2(input: Vec<Vec<i32>>) -> i32 {
     })
 }
 fn searching_circle(friends_relation: &mut Vec<Vec<i32>>, i: usize, j: usize) {
-
     friends_relation[i][j] = 0;
 
     (0..friends_relation[0].len()).for_each(|j2| {

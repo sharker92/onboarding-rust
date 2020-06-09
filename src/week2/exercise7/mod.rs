@@ -1,6 +1,6 @@
 pub fn intersection(nums1: Vec<i32>, nums2: Vec<i32>) -> Vec<i32> {
-    let mut array1 = nums1.clone();
-    let mut array2 = nums2.clone();
+    let mut array1 = nums1;
+    let mut array2 = nums2;
 
     array1.sort();
     array2.sort();
@@ -21,8 +21,8 @@ pub fn intersection(nums1: Vec<i32>, nums2: Vec<i32>) -> Vec<i32> {
 }
 
 pub fn intersection_2(nums1: Vec<i32>, nums2: Vec<i32>) -> Vec<i32> {
-    let mut array1 = nums1.clone();
-    let mut array2 = nums2.clone();
+    let mut array1 = nums1;
+    let mut array2 = nums2;
     let mut result = Vec::new();
 
     array1.sort();

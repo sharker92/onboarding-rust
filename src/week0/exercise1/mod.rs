@@ -1,4 +1,4 @@
-pub fn overlap_rectangles(rect1: Vec<i32>, rect2: Vec<i32>) -> bool {
+pub fn overlap_rectangles_2(rect1: Vec<i32>, rect2: Vec<i32>) -> bool {
     if rect1[0] >= rect2[2] || rect1[2] <= rect2[0] || rect1[1] >= rect2[3] || rect1[3] <= rect2[1]
     {
         return false;
@@ -6,7 +6,7 @@ pub fn overlap_rectangles(rect1: Vec<i32>, rect2: Vec<i32>) -> bool {
     true
 }
 
-pub fn overlap_rectangles_2(rect1: Vec<i64>, rect2: Vec<i64>) -> bool {
+pub fn overlap_rectangles(rect1: Vec<i64>, rect2: Vec<i64>) -> bool {
     let izq;
     let der;
     let bot;
@@ -23,11 +23,11 @@ pub fn overlap_rectangles_2(rect1: Vec<i64>, rect2: Vec<i64>) -> bool {
         der = rect1.clone();
     }
     if rect1[1] <= rect2[1] {
-        bot = rect1.clone();
-        up = rect2.clone();
+        bot = rect1;
+        up = rect2;
     } else {
-        bot = rect2.clone();
-        up = rect1.clone();
+        bot = rect2;
+        up = rect1;
     }
 
     if (der[0] >= izq[0] && der[0] < izq[2]) && (up[1] >= bot[1] && up[1] < bot[3]) {

@@ -1,6 +1,5 @@
 pub fn number_of_islands(grid: Vec<Vec<char>>) -> i32 {
-
-    let mut lands = grid.clone();
+    let mut lands = grid;
 
     (0..lands.len()).fold(0, |islas, i| {
         islas
@@ -13,11 +12,9 @@ pub fn number_of_islands(grid: Vec<Vec<char>>) -> i32 {
                 }
             })
     })
-
 }
 
 fn searching_land(lands: &mut Vec<Vec<char>>, i: usize, j: usize) {
-
     lands[i][j] = '0';
 
     if j + 1 < lands[0].len() && lands[i][j + 1] == '1' {

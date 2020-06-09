@@ -3,7 +3,7 @@ pub fn detect_capital(input: &str) -> bool {
         return true;
     }
     if input.chars().filter(|x| x.is_uppercase()).count() == 1
-        && input.chars().nth(0).unwrap().is_uppercase()
+        && input.chars().next().unwrap().is_uppercase()
     {
         return true;
     }
